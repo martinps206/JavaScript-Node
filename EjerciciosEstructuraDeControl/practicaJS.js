@@ -34,9 +34,9 @@ Por ejemplo, asumiendo que el año actual es 2019 y el usuario
 ingresa 1999, el programa debe imprimir en la consola: “Tienes
 20 años”. */
 
-/* let anioNac = parseInt(prompt("Ingrese el año de naciomiento "));
+/* let anioNac = parseInt(prompt("Ingrese la edad "));
 let edad = (anioNac) => 2022 - anioNac;
-console.log("La edad actual que debe tener es " + edad(anioNac)); */
+console.log("El anio de nacimiento es " + edad(anioNac)); */
 
 /* Escribí un programa que piense un número de forma aleatoria
 del 1 al 10 y le pida al usuario que lo trate de adivinar. Si el
@@ -59,10 +59,10 @@ console.log(random(numero)); */
 
 /* Escribí un programa que imprima los números pares del 0 al 100. */
 
-/* var numeros = new Array(100);
+/* var numeros = new Array(51);
 let centena = () => {
-    for (let index = 0; index < 100; index++) {
-        numeros[index] = index + 1;
+    for (let index = 0; index < 51; index++) {
+        numeros[index] = index*2;
     }
     return numeros;
 }
@@ -193,3 +193,10 @@ console.log(fibonacci(5));
 console.log(fibonacci(15));
 console.log(fibonacci(30)); */
 
+/* const people = [
+  { name: "Gustavo", age: 30 },
+  { name: "Martin", age: 33 },
+  { name: "Vaeria", age: 16 },
+];
+
+console.table(people); */
