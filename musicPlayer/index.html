@@ -14,26 +14,29 @@
     <main class="player">
 
         <!-- title -->
-        <h1 class="title">Nueva cancion</h1>
+        <h1 class="title" id="titulo"></h1>
 
         <!-- cover -->
-        <img src="img/foofighters.jpg" alt="" class="cover">
+        <img src="" alt="" class="cover" id="cover">
         
+        <!-- Audio HTML Media Element-->
+        <audio src="" id="audio"></audio>
+
         <!-- Progress bar -->
-        <div class="progress-container">
-            <section class="progress"></section>
+        <div id="progress-container" class="progress-container">
+            <section id="progress" class="progress"></section>
         </div>
 
         <!-- controls -->
         <section class="controls">
             <button class="prev">
-                <i class="fas fa-backward"></i>
+                <i id="prev" class="fas fa-backward"></i>
             </button>
             <button class="play">
-                <i class="fas fa-play"></i>
+                <i id="play" class="fas fa-play"></i>
             </button>
             <button class="next">
-                <i class="fas fa-forward"></i>
+                <i id="next" class="fas fa-forward"></i>
             </button>
         </section>
 
