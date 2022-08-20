@@ -1,0 +1,84 @@
+/* #modo{
+    width: 30px;
+    font-size: 60px;
+    margin: auto;
+    cursor: pointer;
+} */
+
+.dark{
+    background-color: #0e0e0e;
+}
+
+.dark h1{
+    color: white;
+}
+
+.dark .descripcion{
+    color: rgb(209, 208, 208);
+}
+
+.dark #modo{
+    color: rgb(31, 52, 61);
+}
+
+.dark .card__perfil{
+    background-color: #1A1C1E;
+}
+
+.dark p{
+    color: rgb(209, 208, 208);
+}
+
+.dark h2{
+    color: white;
+}
+
+.dark .card__perfil:hover{
+    background-color: rgb(21, 36, 43);
+}
+
+.dark .enlace{
+    background-color:#1A1C1E;
+    border:1px solid white;
+    color:white;
+}
+
+.container-btn-mode{
+    position: absolute;
+    top:20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+}
+
+.btn-mode{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border:2px solid black;
+    transition: background-color .5s;
+}
+
+.btn-mode i {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.btn-mode.sun{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+}
+
+.btn-mode.moon{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.active{
+    background-color:black;
+    color:#ffcd5c !important;
+}
