@@ -35,57 +35,49 @@ cambiarTema.addEventListener("click", alternarColorTema);
 
 function obtenerDatosDelUsuario() {
   /* --------------- PUNTO 1: Escribe tu codigo a partir de aqui --------------- */
-  let datos = {nombre:'',edad:'',ciudad:''};
-  datos.nombre = prompt("Ingresa tu nombre");
-  datos.edad = 2022 - parseInt(prompt("Ingresa el año en que naciste"));
-  datos.ciudad = prompt("Ingresa la ciudad donde vives");
-  datos.js = confirm('¿Estas interesado en JavaScript?');
-  return datos;
+  datosPersona.name = prompt("Ingrese su nombre");
+  datosPersona.year = 2022 - parseInt(prompt("Ingresa el año en que nació"));
+  datosPersona.city = prompt("Ingresa la ciudad en la que vives");
+  datosPersona.confirmJs = confirm('¿Estas interesado en el curso de JavaScript?');
+  
 }
 
 function renderizarDatosUsuario() {
   /* ------------------- NO TOCAR NI ELIMINAR ESTA FUNCION. ------------------- */
-  let datos = obtenerDatosDelUsuario();
+  obtenerDatosDelUsuario();
   /* --------------- PUNTO 2: Escribe tu codigo a partir de aqui --------------- */
-  let completar = document.getElementById("completar-perfil");
-  completar.addEventListener("click", function () {
-    document.getElementById("nombre").innerText  = datos.nombre;
-    document.getElementById("edad").innerText  = datos.edad;
-    document.getElementById("ciudad").innerText  = datos.ciudad;
-    let confirm = '';
-    datos.js ?  confirm = 'Si' : confirm = 'No';
-    document.getElementById("javascript").innerText = confirm;
-  })
-
+    document.getElementById("nombre").innerText  = datosPersona.name;
+    document.getElementById("edad").innerText  = datosPersona.year;
+    document.getElementById("ciudad").innerText  = datosPersona.city;
+    let auxConfirm = '';
+    datosPersona.confirmJs ?  auxConfirm = 'Si' : auxConfirm = 'No';
+    document.getElementById("javascript").innerText = auxConfirm;
 }
 
 
 function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
   document.getElementById('fila').innerHTML = '';
+  listado.forEach((course) => {
+    document.getElementById('fila').innerHTML += `<div class="caja">
+            <img src="${course.imgUrl}" alt="${course.lenguajes}"></img>
+            <p class="lenguajes">lenguajes:${course.lenguajes}</p>
+            <p class="bimestre">bimestre: ${course.bimestre}</p>
+            </div>`;
+
+  });
   
-
-
+  
 }
 
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
-  let sitio = document.getElementById("cambiar-tema");
-  let body = document.body;
-
-  sitio.addEventListener("click", function(){
-    let val = body.classList.toggle("dark");
-    localStorage.setItem("cambiar-tema", val);
-  })
-
-  let valor = localStorage.getItem("cambiar-tema");
-
-  if (valor) {
-    body.classList.add("dark")
-  } else {
-    body.classList.remove("dark")
-  } 
+  document.getElementById("sitio").classList.toggle("dark");
 }
 
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
-
+document.addEventListener("keydown", (event) => {
+    if (event.key === "f" || event.key === "F") {
+      document.getElementById("sobre-mi").classList.remove("oculto");
+    }
+});
