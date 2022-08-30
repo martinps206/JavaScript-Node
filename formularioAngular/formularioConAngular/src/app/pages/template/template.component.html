@@ -1,0 +1,61 @@
+<h3 class="text-center">FORMULARIOS</h3>
+<h4>Tipo:{{tipo}} </h4>
+<hr>
+<form autocomplete="off" (ngSubmit) = "guardar(forma)" #forma = "ngForm">
+
+    <div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+
+                <input class="form-control" name="nombre" type="text" [ngModel]="usuarios.nombre" placeholder="Martin" #nombre="ngModel" [class.is-invalid]="nombre.invalid && nombre.touched" required>
+                <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">Dato obligatorio</small>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Apellido</label>
+            <div class="col-8">
+
+                <input class="form-control" name="apellido" type="text" [ngModel]="usuarios.apellido" placeholder="Paliza" #apellido="ngModel" [class.is-invalid]="apellido.invalid && apellido.touched" required>
+                <small *ngIf="apellido.invalid && apellido.touched" class="form-text text-danger">Dato obligatorio</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Correo</label>
+        <div class="col-8">
+
+            <input class="form-control" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [ngModel]="usuarios.email" placeholder="martinpaliza@email.com" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required>
+            <small *ngIf="email.invalid && email.touched" class="form-text text-danger">Dato obligatorio</small>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label" for="">Genero</label>
+      <div class="col-8">
+        <select class="form-control" name="genero" id="" [ngModel]="usuarios.genero" #genero="ngModel" [class.is-invalid]="genero.invalid && genero.touched" required>
+          <option value="">Seleccione un genero</option>
+          <option value="" *ngFor="let genero of generos">{{genero}}</option>
+        </select>
+        <small *ngIf="genero.invalid && genero.touched" class="form-text text-danger">Dato obligatorio</small>
+
+      </div>
+
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+        </div>
+    </div>
+
+</form>
