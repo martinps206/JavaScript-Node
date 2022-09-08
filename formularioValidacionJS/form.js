@@ -25,11 +25,14 @@ document.querySelectorAll('.form-box').forEach((box) => {
 });
 
 validation = (box, boxInput) => {
-    if (boxInput.value == '') {
-        showError(true, box, boxInput);
-    } else {
-        showError(false, box, boxInput);
+    if (boxInput.name == 'nickName') {
+        if (boxInput.value == '') {
+            showError(true, box, boxInput);
+        } else {
+            showError(false, box, boxInput);
+        }
     }
+    
 
     if (boxInput.name == 'email') {
         if (!boxInput.value.match(mailformatRegex)) {
