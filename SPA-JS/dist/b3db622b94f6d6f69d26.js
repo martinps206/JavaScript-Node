@@ -18,5 +18,3 @@ window.addEventListener('hashchange', () => {
 })
 
 colorSwitch.addEventListener('change', cambiaTema);
-
-/* npx webpack-dev-server */
