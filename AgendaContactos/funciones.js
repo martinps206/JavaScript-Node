@@ -5,9 +5,9 @@ const guardarContacto = (db, contacto) => {
 
 const cargarContactos = (db, parentNode) => {
   let claves = Object.keys(db);
-
-  for (clave of claves) {
-    let contacto = JSON.parse(db.getItem(clave));
+  console.log(claves);
+  for (claves of claves) {
+    let contacto = JSON.parse(db.getItem(claves));
     crearContacto(parentNode, contacto, db);
   }
 };
