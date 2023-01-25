@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: white;
+    justify-content: space-around;
+}
+
+p {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 1600px) {
+    body {
+        background-color: wheat;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-color: slategrey;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    body {
+        background-color: black;
+    }
+    p {
+        color: white;
+    }
+}
+
+@media (max-width: 770px) {
+    body {
+        background-color: chocolate;
+    }
+}
+
+@media (max-width: 770px) and (orientation: portrait) {
+    body {
+        background-color: grey;
+    }
+}
+
+@media (max-width: 770px) and (orientation: landscape) {
+    body {
+        background-color: darkblue;
+    }
+    p {
+        color: red
+    }
+}
+
+@media(max-width: 600px) {
+    body {
+        background-color: turquoise;
+    }
+}
+
+@media(max-width: 600px) and (orientation: landscape) {
+    body {
+        background-color: royalblue;
+    }
+    p {
+        color: plum;
+    }
+}
