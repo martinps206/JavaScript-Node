@@ -1,8 +1,0 @@
-npm init -y  (crea el archivo package.json)
-
-npm i express pg  (framework y el driver de conexion)
-
-npm i nodemon -D (reiniciar el servidor o consola para desarrollo)
-
-npm run dev (ejecutar anterior fue: node src/index.js)
-
